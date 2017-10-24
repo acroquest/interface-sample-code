@@ -1,4 +1,4 @@
-u# Interface 12月号のソースコードです。
+# Interface 12月号のソースコードです。
 [Interface 12月号 人工知能ウルトラ大百科](http://www.kumikomi.net/interface/contents/201712.php)に掲載されている次の記事のコードを本リポジトリで管理しています。
 
 + メカニズム実験①...対話する人工知能
