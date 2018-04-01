@@ -32,8 +32,8 @@ with tf.Graph().as_default():
         while True:
             response, frame = cap.read()
             image_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-            scale_height = 512.0 / image_gray.shape[0]
-            scale_width = 512.0 / image_gray.shape[1]
+            scale_height = 512.0 / image_gray.shape[1]
+            scale_width = 512.0 / image_gray.shape[0]
             resize_image_gray = cv2.resize(image_gray, (512, 512))
 
             minsize = (int(resize_image_gray.shape[0] * 0.1), int(resize_image_gray.shape[1] * 0.1))
@@ -64,7 +64,7 @@ with tf.Graph().as_default():
                     else:
                         color = (0, 0, 255)
                     # 顔検出領域を描画する。
-                    cv2.rectangle(frame, (min_width, min_height), (max_width, max_height), color, 10)
+                    cv2.rectangle(frame, (min_height, min_width), (max_height, max_width), color, 10)
                     k = cv2.waitKey(1)
 
             cv2.imshow("face camera", frame)
